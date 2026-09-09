@@ -151,6 +151,15 @@
       }
       if (prevArrow) prevArrow.addEventListener("click", function () { scrollGallery(-1); });
       if (nextArrow) nextArrow.addEventListener("click", function () { scrollGallery(1); });
+  
+      var scrollHint = document.getElementById("gallery-scroll-hint");
+      if (scrollHint) {
+        var dismissHint = function () {
+          scrollHint.classList.add("is-dismissed");
+          galleryTrack.removeEventListener("scroll", dismissHint);
+        };
+        galleryTrack.addEventListener("scroll", dismissHint, { passive: true });
+      }
     }
   
     /* ---------------------------------------------------------
@@ -250,14 +259,21 @@
        --------------------------------------------------------- */
     var memorialFab = document.getElementById("memorial-fab");
     var heroSection = document.getElementById("inicio");
-    var memorialSection = document.getElementById("memorial");
+  
+    // Hidden while on the hero, AND for the entire closing stretch of the
+    // page (Memorial info onward) so it never overlaps the memorial card,
+    // the thank-you message, or the footer name/dates.
+    var fabHideZoneIds = ["memorial", "mensagem", "site-footer"];
   
     if (memorialFab && heroSection && "IntersectionObserver" in window) {
       var heroVisible = true;
-      var memorialVisible = false;
+      var hideZoneVisible = {};
   
       function updateFabVisibility() {
-        var shouldShow = !heroVisible && !memorialVisible;
+        var anyHideZoneVisible = Object.keys(hideZoneVisible).some(function (id) {
+          return hideZoneVisible[id];
+        });
+        var shouldShow = !heroVisible && !anyHideZoneVisible;
         memorialFab.classList.toggle("is-visible", shouldShow);
       }
   
@@ -267,13 +283,16 @@
       }, { threshold: 0 });
       heroObserver.observe(heroSection);
   
-      if (memorialSection) {
-        var memorialObserver = new IntersectionObserver(function (entries) {
-          memorialVisible = entries[0].isIntersecting;
+      fabHideZoneIds.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        hideZoneVisible[id] = false;
+        var observer = new IntersectionObserver(function (entries) {
+          hideZoneVisible[id] = entries[0].isIntersecting;
           updateFabVisibility();
-        }, { threshold: 0.15 });
-        memorialObserver.observe(memorialSection);
-      }
+        }, { threshold: 0 });
+        observer.observe(el);
+      });
     }
   
   })();
