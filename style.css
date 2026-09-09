@@ -817,6 +817,7 @@ html[data-lang="es"] [data-lang-content="pt"] { display: none; }
   z-index: 30;
   display: inline-flex;
   align-items: center;
+  gap: 0.5em;
   background: var(--sage-olive);
   color: var(--ivory);
   font-family: var(--font-plain);
@@ -839,6 +840,11 @@ html[data-lang="es"] [data-lang-content="pt"] { display: none; }
 .memorial-fab:hover,
 .memorial-fab:focus-visible {
   background: #6d7457;
+}
+.memorial-fab-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
