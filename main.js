@@ -245,5 +245,35 @@
       }
     }
   
-  })();
+    /* ---------------------------------------------------------
+       6. FLOATING "MEMORIAL INFO" BUTTON
+       --------------------------------------------------------- */
+    var memorialFab = document.getElementById("memorial-fab");
+    var heroSection = document.getElementById("inicio");
+    var memorialSection = document.getElementById("memorial");
   
+    if (memorialFab && heroSection && "IntersectionObserver" in window) {
+      var heroVisible = true;
+      var memorialVisible = false;
+  
+      function updateFabVisibility() {
+        var shouldShow = !heroVisible && !memorialVisible;
+        memorialFab.classList.toggle("is-visible", shouldShow);
+      }
+  
+      var heroObserver = new IntersectionObserver(function (entries) {
+        heroVisible = entries[0].isIntersecting;
+        updateFabVisibility();
+      }, { threshold: 0 });
+      heroObserver.observe(heroSection);
+  
+      if (memorialSection) {
+        var memorialObserver = new IntersectionObserver(function (entries) {
+          memorialVisible = entries[0].isIntersecting;
+          updateFabVisibility();
+        }, { threshold: 0.15 });
+        memorialObserver.observe(memorialSection);
+      }
+    }
+  
+  })();

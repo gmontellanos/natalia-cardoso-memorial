@@ -809,6 +809,52 @@ html[data-lang="es"] [data-lang-content="pt"] { display: none; }
 }
 .footer-dates { font-style: normal; font-size: 0.85rem; }
 
+/* ---------- Floating "Memorial Info" quick-access button ---------- */
+.memorial-fab {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  background: var(--sage-olive);
+  color: var(--ivory);
+  font-family: var(--font-plain);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.65em 1.3em;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(78, 85, 67, 0.28);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+}
+.memorial-fab.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.memorial-fab:hover,
+.memorial-fab:focus-visible {
+  background: #6d7457;
+}
+
+@media (max-width: 600px) {
+  .memorial-fab {
+    left: var(--space-md);
+    right: var(--space-md);
+    bottom: var(--space-sm);
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memorial-fab { transition: opacity 0ms; transform: none; }
+}
+
 .site-credit {
   text-align: center;
   font-size: 0.8rem;
