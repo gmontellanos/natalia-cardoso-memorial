@@ -424,9 +424,11 @@ body { background-color: var(--blush-beige); }
 
 .splash-kicker {
   font-style: italic;
+  font-size: 1.25rem;
   color: var(--text-secondary);
   letter-spacing: 0.04em;
   margin-bottom: 0.35rem;
+  text-shadow: 0 2px 8px rgba(78, 85, 67, 0.18);
 }
 
 .splash-portrait-wrap {
@@ -447,7 +449,15 @@ body { background-color: var(--blush-beige); }
 }
 
 @media (min-width: 1000px) {
-  .splash-portrait-wrap { width: 520px; }
+  .splash { padding: var(--space-md) var(--space-md); gap: 0; }
+  .splash-content { gap: 0; max-width: 480px; }
+  .splash-kicker { margin-bottom: 0.2rem; }
+  .splash-portrait-wrap {
+    width: clamp(240px, 36vh, 420px);
+    margin-bottom: 0.3rem;
+  }
+  .splash-content .name-script { line-height: 0.95; }
+  .splash-content .dates { margin-bottom: 1rem; }
 }
 
 .splash-portrait {
@@ -920,6 +930,36 @@ body { background-color: var(--blush-beige); }
   inset: -6% -12%;
   background: radial-gradient(closest-side, rgba(244, 241, 235, 0.96), rgba(244, 241, 235, 0.7) 65%, rgba(244, 241, 235, 0) 100%);
   filter: blur(6px);
+}
+
+/* Song + Beliefs sit side by side as their own boxes; Family
+   gets its own solo box below. The card's own solid background
+   already separates it from the stripes, so the glow-behind
+   trick above isn't needed on these — just switch it off. */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  max-width: 720px;
+  margin: 0 auto var(--space-lg);
+}
+@media (min-width: 700px) {
+  .info-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
+}
+
+.info-card {
+  max-width: none;
+  margin: 0;
+  padding: var(--space-md);
+  background: var(--ivory);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(78, 85, 67, 0.1);
+}
+.info-card::before { content: none; }
+
+.info-card-solo {
+  max-width: 700px;
+  margin: 0 auto var(--space-lg);
 }
 
 .info-heading {
