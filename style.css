@@ -27,7 +27,7 @@
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 4rem;
-  --space-xl: 6.5rem;
+  --space-xl: 5rem;
 
   --max-width: 780px;
   --radius: 4px;
@@ -160,16 +160,29 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
 .section { padding: var(--space-xl) 0; position: relative; }
 
 /* ---------------------------------------------------------
-   Desktop "panel" treatment: the plain (non-striped,
-   non-quote-band) sections float as a soft card on a
-   slightly deeper backdrop, so the page fills the screen
-   instead of leaving bare margins on wide viewports. The
-   striped Memorial/footer and the blush quote-bands stay
-   full-bleed as the visual breaks between panels.
+   "Panel" treatment: the plain (non-striped, non-quote-band)
+   sections float as a soft card on a slightly deeper backdrop
+   at every screen size, so the page fills the screen instead
+   of leaving bare margins. The striped Memorial/footer and
+   the blush quote-bands stay full-bleed as the visual breaks
+   between panels.
    --------------------------------------------------------- */
-@media (min-width: 1000px) {
-  body { background-color: var(--blush-beige); }
+body { background-color: var(--blush-beige); }
 
+.hero-section,
+#historia.copy-section,
+.gallery-section,
+.video-section,
+#mensagem.copy-section {
+  margin: 0 0.6rem var(--space-md);
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+  background: var(--ivory);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(78, 85, 67, 0.1);
+}
+
+@media (min-width: 1000px) {
   .hero-section,
   #historia.copy-section,
   .gallery-section,
@@ -179,7 +192,6 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
     margin: 0 auto var(--space-lg);
     padding-left: var(--space-md);
     padding-right: var(--space-md);
-    background: var(--ivory);
     border-radius: 18px;
     box-shadow: 0 24px 60px rgba(78, 85, 67, 0.12);
   }
@@ -418,8 +430,20 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
 }
 
 .splash-portrait-wrap {
+  position: relative;
+  z-index: 0;
   width: min(85vw, 380px);
   margin-bottom: 0.5rem;
+}
+
+.splash-portrait-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(78, 85, 67, 0.32) 0%, rgba(78, 85, 67, 0.14) 55%, rgba(78, 85, 67, 0) 76%);
+  filter: blur(16px);
 }
 
 @media (min-width: 1000px) {
@@ -430,7 +454,7 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 22px rgba(78, 85, 67, 0.28));
+  position: relative;
 }
 
 .splash-content .name-script { margin-top: 0; }
@@ -592,7 +616,7 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
 /* =========================================================
    HERO
    ========================================================= */
-.hero-section { padding-top: var(--space-lg); text-align: center; }
+.hero-section { padding-top: var(--space-md); text-align: center; }
 
 .hero-inner {
   max-width: 420px;
@@ -602,16 +626,30 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
   align-items: center;
 }
 
-.hero-portrait {
+.hero-portrait-wrap {
+  position: relative;
+  z-index: 0;
   width: min(80vw, 340px);
+}
+.hero-portrait-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(78, 85, 67, 0.32) 0%, rgba(78, 85, 67, 0.14) 55%, rgba(78, 85, 67, 0) 76%);
+  filter: blur(16px);
+}
+
+.hero-portrait {
+  width: 100%;
   height: auto;
-  filter: drop-shadow(0 10px 22px rgba(78, 85, 67, 0.28));
 }
 .hero-name { margin-top: var(--space-sm); }
 
 @media (min-width: 1000px) {
   .hero-inner { max-width: 720px; }
-  .hero-portrait { width: 660px; }
+  .hero-portrait-wrap { width: 660px; }
 }
 .hero-dates { margin-top: 0.35rem; }
 
