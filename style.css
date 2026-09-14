@@ -101,8 +101,12 @@ button:focus-visible,
 }
 
 /* ---------- Bilingual content toggling ---------- */
-html[data-lang="pt"] [data-lang-content="es"] { display: none; }
-html[data-lang="es"] [data-lang-content="pt"] { display: none; }
+html[data-lang="pt"] [data-lang-content="es"],
+html[data-lang="pt"] [data-lang-content="en"] { display: none; }
+html[data-lang="es"] [data-lang-content="pt"],
+html[data-lang="es"] [data-lang-content="en"] { display: none; }
+html[data-lang="en"] [data-lang-content="pt"],
+html[data-lang="en"] [data-lang-content="es"] { display: none; }
 
 /* ---------- Shared type treatments ---------- */
 .name-script {
@@ -154,6 +158,32 @@ html[data-lang="es"] [data-lang-content="pt"] { display: none; }
 }
 
 .section { padding: var(--space-xl) 0; position: relative; }
+
+/* ---------------------------------------------------------
+   Desktop "panel" treatment: the plain (non-striped,
+   non-quote-band) sections float as a soft card on a
+   slightly deeper backdrop, so the page fills the screen
+   instead of leaving bare margins on wide viewports. The
+   striped Memorial/footer and the blush quote-bands stay
+   full-bleed as the visual breaks between panels.
+   --------------------------------------------------------- */
+@media (min-width: 1000px) {
+  body { background-color: var(--blush-beige); }
+
+  .hero-section,
+  #historia.copy-section,
+  .gallery-section,
+  .video-section,
+  #mensagem.copy-section {
+    max-width: 1040px;
+    margin: 0 auto var(--space-lg);
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+    background: var(--ivory);
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(78, 85, 67, 0.12);
+  }
+}
 
 .reveal {
   opacity: 0;
@@ -388,8 +418,12 @@ html[data-lang="es"] [data-lang-content="pt"] { display: none; }
 }
 
 .splash-portrait-wrap {
-  width: min(68vw, 310px);
+  width: min(85vw, 380px);
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  .splash-portrait-wrap { width: 520px; }
 }
 
 .splash-portrait {
@@ -569,11 +603,16 @@ html[data-lang="es"] [data-lang-content="pt"] { display: none; }
 }
 
 .hero-portrait {
-  width: min(64vw, 270px);
+  width: min(80vw, 340px);
   height: auto;
   filter: drop-shadow(0 10px 22px rgba(78, 85, 67, 0.28));
 }
 .hero-name { margin-top: var(--space-sm); }
+
+@media (min-width: 1000px) {
+  .hero-inner { max-width: 720px; }
+  .hero-portrait { width: 660px; }
+}
 .hero-dates { margin-top: 0.35rem; }
 
 /* =========================================================

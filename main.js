@@ -22,7 +22,7 @@
     var site = document.getElementById("site");
   
     function setLang(lang) {
-      if (lang !== "pt" && lang !== "es") lang = "pt";
+      if (lang !== "pt" && lang !== "es" && lang !== "en") lang = "pt";
       html.setAttribute("data-lang", lang);
       html.setAttribute("lang", lang);
       try { sessionStorage.setItem(LANG_KEY, lang); } catch (e) { /* storage unavailable, ignore */ }
@@ -76,7 +76,7 @@
     // If a language was already chosen this visit, skip the splash
     var storedLang = null;
     try { storedLang = sessionStorage.getItem(LANG_KEY); } catch (e) { /* ignore */ }
-    if (storedLang === "pt" || storedLang === "es") {
+    if (storedLang === "pt" || storedLang === "es" || storedLang === "en") {
       enterSiteImmediately(storedLang);
     } else {
       setLang("pt");

@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=22">
+<link rel="stylesheet" href="style.css?v=23">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 
   <div class="splash-content">
     <p class="splash-kicker">
-      <span data-lang-content="pt">Em Memória de</span><span data-lang-content="es">En Memoria de</span>
+      <span data-lang-content="pt">Em Memória de</span><span data-lang-content="es">En Memoria de</span><span data-lang-content="en">In Memory of</span>
     </p>
 
     <div class="splash-portrait-wrap">
@@ -33,11 +33,12 @@
     </div>
 
     <h1 class="name-script">Natalia Cardoso</h1>
-    <p class="dates">24/12/1958 &mdash; 21/08/2026</p>
+    <p class="dates"><span data-lang-content="pt">24/12/1958 &mdash; 21/08/2026</span><span data-lang-content="es">24/12/1958 &mdash; 21/08/2026</span><span data-lang-content="en">12/24/1958 &mdash; 08/21/2026</span></p>
 
     <div class="lang-buttons" role="group" aria-label="Escolha o idioma / Elija el idioma">
       <button type="button" class="lang-btn" data-select-lang="pt">Português</button>
       <button type="button" class="lang-btn" data-select-lang="es">Español</button>
+      <button type="button" class="lang-btn" data-select-lang="en">English</button>
     </div>
   </div>
 </div>
@@ -54,6 +55,7 @@
     </svg>
     <span data-lang-content="pt">Informações do Memorial</span>
     <span data-lang-content="es">Información del Memorial</span>
+    <span data-lang-content="en">Memorial Info</span>
   </a>
 
   <header class="site-header">
@@ -69,17 +71,19 @@
 
     <nav id="primary-nav" class="primary-nav" aria-label="Navegação principal / Navegación principal">
       <ul>
-        <li><a href="#inicio"><span data-lang-content="pt">Início</span><span data-lang-content="es">Inicio</span></a></li>
-        <li><a href="#historia"><span data-lang-content="pt">Sobre Natalia</span><span data-lang-content="es">Sobre Natalia</span></a></li>
-        <li><a href="#momentos"><span data-lang-content="pt">Momentos</span><span data-lang-content="es">Momentos</span></a></li>
-        <li><a href="#video"><span data-lang-content="pt">Homenagem em Vídeo</span><span data-lang-content="es">Homenaje en Video</span></a></li>
-        <li><a href="#memorial"><span data-lang-content="pt">Memorial</span><span data-lang-content="es">Memorial</span></a></li>
-        <li><a href="#mensagem"><span data-lang-content="pt">Mensagem da Família</span><span data-lang-content="es">Mensaje de la Familia</span></a></li>
+        <li><a href="#inicio"><span data-lang-content="pt">Início</span><span data-lang-content="es">Inicio</span><span data-lang-content="en">Home</span></a></li>
+        <li><a href="#historia"><span data-lang-content="pt">Sobre Natalia</span><span data-lang-content="es">Sobre Natalia</span><span data-lang-content="en">About Natalia</span></a></li>
+        <li><a href="#momentos"><span data-lang-content="pt">Momentos</span><span data-lang-content="es">Momentos</span><span data-lang-content="en">Moments</span></a></li>
+        <li><a href="#video"><span data-lang-content="pt">Homenagem em Vídeo</span><span data-lang-content="es">Homenaje en Video</span><span data-lang-content="en">Video Tribute</span></a></li>
+        <li><a href="#memorial"><span data-lang-content="pt">Memorial</span><span data-lang-content="es">Memorial</span><span data-lang-content="en">Memorial</span></a></li>
+        <li><a href="#mensagem"><span data-lang-content="pt">Mensagem da Família</span><span data-lang-content="es">Mensaje de la Familia</span><span data-lang-content="en">Family Message</span></a></li>
       </ul>
       <div class="lang-switch" role="group" aria-label="Idioma / Language">
         <button type="button" class="lang-switch-btn" data-select-lang="pt">PT</button>
         <span aria-hidden="true">|</span>
         <button type="button" class="lang-switch-btn" data-select-lang="es">ES</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" class="lang-switch-btn" data-select-lang="en">EN</button>
       </div>
     </nav>
   </header>
@@ -91,7 +95,7 @@
       <div class="hero-inner">
         <img src="images/nataliacardoso.svg" alt="Natalia Cardoso" class="hero-portrait" loading="lazy">
         <h1 class="name-script hero-name">Natalia Cardoso</h1>
-        <p class="dates hero-dates">24/12/1958 &mdash; 21/08/2026</p>
+        <p class="dates hero-dates"><span data-lang-content="pt">24/12/1958 &mdash; 21/08/2026</span><span data-lang-content="es">24/12/1958 &mdash; 21/08/2026</span><span data-lang-content="en">12/24/1958 &mdash; 08/21/2026</span></p>
       </div>
     </section>
 
@@ -102,6 +106,7 @@
         <img src="images/flower.webp" alt="" class="quote-flower" aria-hidden="true">
         <p class="quote-text" data-lang-content="pt">Amada esposa, mãe, irmã, tia e amiga</p>
         <p class="quote-text" data-lang-content="es">Amada esposa, madre, hermana, tía y amiga</p>
+        <p class="quote-text" data-lang-content="en">Beloved wife, mother, sister, aunt, and friend</p>
       </div>
     </div>
 
@@ -109,7 +114,7 @@
     <section id="historia" class="section copy-section reveal">
       <div class="section-inner">
         <h2 class="section-heading heading-plain">
-          <span data-lang-content="pt">Sobre Natalia</span><span data-lang-content="es">Sobre Natalia</span>
+          <span data-lang-content="pt">Sobre Natalia</span><span data-lang-content="es">Sobre Natalia</span><span data-lang-content="en">About Natalia</span>
         </h2>
 
         <div class="copy-block" data-lang-content="pt">
@@ -135,6 +140,18 @@
 
           <p class="pull-quote">Natalia será profundamente extrañada y siempre recordada con amor. Su corazón generoso, su amor por los demás, su sinceridad, su hospitalidad y su fe inquebrantable.</p>
         </div>
+
+        <div class="copy-block" data-lang-content="en">
+          <p>Beloved wife, mother, sister, aunt, and friend. On December 24, 1958, on the beautiful island of Pico, Azores, Natalia was born, the daughter of José Vieira Sousa and Zulmira Macedo da Silva. She grew up surrounded by the love of her siblings, Fernando, Lucilia, Lucia, Maria Elena, José Justino, and Elvino. On June 22, 1977, Natalia married the love of her life, José Cardoso. Together they built their home and their life in Sacramento, California. After 67 years of a life filled with love, family, and faith, Natalia passed away on August 21, 2026.</p>
+
+          <p>Natalia deeply loved her family and protected them fiercely, especially her sisters, nieces, and nephews. She greatly valued the time she spent with her sisters, including the beautiful memories they created swimming together in the sea. She expressed her love in many ways, but one of her favorite ways was through cooking. Her home was always open and was a welcoming place, filled with delicious food, wine, and a place for everyone around her table. Natalia had a special ability to connect with people of all ages. She was sincere and was never afraid to tell you what you needed to hear, but she always ended with a hug and by telling you that she loved you. Her generosity and hospitality were well known, and for many years, she opened the doors of her home for Bible studies and service groups.</p>
+
+          <p>Natalia was baptized in July 1988 as one of Jehovah’s Witnesses. Her faith was the center of her life. She believed in Jehovah’s promises for the future and strived to live her life according to His will.</p>
+
+          <p>She is survived by her husband, José Cardoso; her children, Kelly and Kevin Cardoso; and her sisters, Lucilia, Lucia, and Maria Elena, as well as her many beloved nieces, nephews, family members, and friends.</p>
+
+          <p class="pull-quote">Natalia will be deeply missed and always remembered with love. Her generous heart, her love for others, her sincerity, her hospitality, and her unwavering faith.</p>
+        </div>
       </div>
     </section>
 
@@ -145,6 +162,7 @@
         <p class="section-subheading">
           <span data-lang-content="pt">Fragmentos de uma vida bem vivida.</span>
           <span data-lang-content="es">Fragmentos de una vida bien vivida.</span>
+          <span data-lang-content="en">Fragments of a life well lived.</span>
         </p>
 
         <div class="gallery-wrap">
@@ -174,6 +192,7 @@
         <img src="images/flower.webp" alt="" class="quote-flower" aria-hidden="true">
         <p class="quote-text" data-lang-content="pt">A sua generosidade e hospitalidade eram bem conhecidas</p>
         <p class="quote-text" data-lang-content="es">Su generosidad y hospitalidad eran bien conocidas</p>
+        <p class="quote-text" data-lang-content="en">Her generosity and hospitality were well known</p>
       </div>
     </div>
 
@@ -181,7 +200,7 @@
     <section id="video" class="section video-section reveal">
       <div class="section-inner">
         <h2 class="section-heading heading-plain">
-          <span data-lang-content="pt">Homenagem em Vídeo</span><span data-lang-content="es">Homenaje en Video</span>
+          <span data-lang-content="pt">Homenagem em Vídeo</span><span data-lang-content="es">Homenaje en Video</span><span data-lang-content="en">Video Tribute</span>
         </h2>
 
         <div class="video-frame">
@@ -200,6 +219,7 @@
             <p>
               <span data-lang-content="pt">O vídeo de homenagem será adicionado em breve.</span>
               <span data-lang-content="es">El video de homenaje se añadirá próximamente.</span>
+              <span data-lang-content="en">The video tribute will be added soon.</span>
             </p>
           </div>
         </div>
@@ -219,12 +239,14 @@
           <p class="memorial-life-dates">
             <span data-lang-content="pt">24 de dezembro de 1958 &ndash; 21 de agosto de 2026</span>
             <span data-lang-content="es">24 de diciembre de 1958 &ndash; 21 de agosto de 2026</span>
+            <span data-lang-content="en">December 24, 1958 &ndash; August 21, 2026</span>
           </p>
 
           <div class="memorial-details">
             <p class="memorial-when">
               <span data-lang-content="pt">Sábado, 19 de setembro de 2026 &middot; 15h00</span>
               <span data-lang-content="es">Sábado, 19 de septiembre de 2026 &middot; 3:00 p.m.</span>
+              <span data-lang-content="en">Saturday, September 19, 2026 &middot; 3:00 PM</span>
             </p>
 
             <a class="memorial-address"
@@ -241,14 +263,15 @@
             <a class="btn btn-primary zoom-btn" href="https://us02web.zoom.us/j/5696397450?pwd=jOBo6xFgX6UBvb9ShxIJj4AbTgF7pK.1&amp;omn=87520512510" target="_blank" rel="noopener" data-zoom-link>
               <span data-lang-content="pt">Participar por Zoom</span>
               <span data-lang-content="es">Unirse por Zoom</span>
+              <span data-lang-content="en">Join by Zoom</span>
             </a>
             <dl class="zoom-meta">
               <div>
-                <dt><span data-lang-content="pt">ID da Reunião</span><span data-lang-content="es">ID de la Reunión</span></dt>
+                <dt><span data-lang-content="pt">ID da Reunião</span><span data-lang-content="es">ID de la Reunión</span><span data-lang-content="en">Meeting ID</span></dt>
                 <dd data-zoom-id>569 639 7450</dd>
               </div>
               <div>
-                <dt><span data-lang-content="pt">Senha</span><span data-lang-content="es">Contraseña</span></dt>
+                <dt><span data-lang-content="pt">Senha</span><span data-lang-content="es">Contraseña</span><span data-lang-content="en">Passcode</span></dt>
                 <dd data-zoom-password>123654</dd>
               </div>
             </dl>
@@ -258,10 +281,11 @@
         <!-- CÂNTICO — placed right after the memorial card since it's sung during the ceremony -->
         <div class="info-block">
           <h3 class="info-heading">
-            <span data-lang-content="pt">Cântico do memorial</span><span data-lang-content="es">Canción del memorial</span>
+            <span data-lang-content="pt">Cântico do memorial</span><span data-lang-content="es">Canción del memorial</span><span data-lang-content="en">Memorial Song</span>
           </h3>
           <p data-lang-content="pt">Os links abaixo dão acesso ao cântico que será cantado durante a cerimónia, com a letra disponível em espanhol e em português.</p>
           <p data-lang-content="es">Los siguientes enlaces dan acceso a la canción que se cantará durante la ceremonia, con la letra disponible en español y en portugués.</p>
+          <p data-lang-content="en">The links below give access to the song that will be sung during the ceremony, with lyrics available in Spanish and Portuguese.</p>
 
           <!--
             TO ADD THE SONG:
@@ -271,29 +295,33 @@
           <a class="pill-link song-link" href="#" data-song-link>
             <span data-lang-content="pt">Nome do cântico &middot; Número do cântico</span>
             <span data-lang-content="es">Nombre de la canción &middot; Número de la canción</span>
+            <span data-lang-content="en">Song name &middot; Song number</span>
           </a>
         </div>
 
         <!-- FAMÍLIA / FAMILIA — pulled verbatim from the biography copy -->
         <div class="info-block">
           <h3 class="info-heading">
-            <span data-lang-content="pt">Família</span><span data-lang-content="es">Familia</span>
+            <span data-lang-content="pt">Família</span><span data-lang-content="es">Familia</span><span data-lang-content="en">Family</span>
           </h3>
           <p data-lang-content="pt">Deixa o marido, José Cardoso; os filhos, Kelly e Kevin Cardoso; e as irmãs, Lúcia, Maria Elena e Lucília, bem como seus queridos sobrinhos, familiares e amigos.</p>
           <p data-lang-content="es">Le sobreviven su esposo, José Cardoso; sus hijos, Kelly y Kevin Cardoso; y sus hermanas, Lucilia, Lucia y Maria Elena, además de sus muchas queridas sobrinas, sobrinos, familiares y amigos.</p>
+          <p data-lang-content="en">She is survived by her husband, José Cardoso; her children, Kelly and Kevin Cardoso; and her sisters, Lucilia, Lucia, and Maria Elena, as well as her many beloved nieces, nephews, family members, and friends.</p>
         </div>
 
         <!-- BELIEFS -->
         <div class="info-block">
           <h3 class="info-heading">
-            <span data-lang-content="pt">Sobre as crenças de Natalia</span><span data-lang-content="es">Sobre las creencias de Natalia</span>
+            <span data-lang-content="pt">Sobre as crenças de Natalia</span><span data-lang-content="es">Sobre las creencias de Natalia</span><span data-lang-content="en">About Natalia’s Beliefs</span>
           </h3>
           <p data-lang-content="pt">Os links abaixo direcionam para o site onde poderá encontrar mais informações sobre as crenças de Natalia.</p>
           <p data-lang-content="es">Los siguientes enlaces dirigen al sitio web donde podrá encontrar más información sobre las creencias de Natalia.</p>
+          <p data-lang-content="en">The links below direct to the website where you can find more information about Natalia’s beliefs.</p>
 
           <!-- Links to jw.org's Portuguese/Spanish homepage; replace href with a more specific page if you have one. -->
           <a class="pill-link" href="https://www.jw.org/pt/" target="_blank" rel="noopener" data-beliefs-link data-lang-content="pt">jw.org/pt</a>
           <a class="pill-link" href="https://www.jw.org/es/" target="_blank" rel="noopener" data-beliefs-link data-lang-content="es">jw.org/es</a>
+          <a class="pill-link" href="https://www.jw.org" target="_blank" rel="noopener" data-beliefs-link data-lang-content="en">jw.org</a>
         </div>
       </div>
     </section>
@@ -305,6 +333,7 @@
         <img src="images/flower.webp" alt="" class="quote-flower" aria-hidden="true">
         <p class="quote-text" data-lang-content="pt">A sua fé era o centro da sua vida</p>
         <p class="quote-text" data-lang-content="es">Su fe era el centro de su vida</p>
+        <p class="quote-text" data-lang-content="en">Her faith was the center of her life</p>
       </div>
     </div>
 
@@ -312,7 +341,7 @@
     <section id="mensagem" class="section copy-section reveal">
       <div class="section-inner">
         <h2 class="section-heading heading-plain">
-          <span data-lang-content="pt">Mensagem da Família</span><span data-lang-content="es">Mensaje de la Familia</span>
+          <span data-lang-content="pt">Mensagem da Família</span><span data-lang-content="es">Mensaje de la Familia</span><span data-lang-content="en">Family Message</span>
         </h2>
 
         <div class="copy-block" data-lang-content="pt">
@@ -325,12 +354,19 @@
           <p>Agradecemos a cada uno de ustedes por estar aquí hoy y por honrar la memoria de Natalia. Su apoyo significa para nosotros más de lo que las palabras pueden expresar.</p>
         </div>
 
+        <div class="copy-block" data-lang-content="en">
+          <p>We are deeply grateful for the love, support, and kindness you have shown us during this difficult time. Your presence, your words of comfort, and your gestures of kindness have given us strength and comfort.</p>
+          <p>We thank each of you for being here today and for honoring Natalia’s memory. Your support means more to us than words can express.</p>
+        </div>
+
         <p class="signature">
           <span class="signature-plain" data-lang-content="pt">Com sincero agradecimento,</span>
           <span class="signature-plain" data-lang-content="es">Con sincero agradecimiento,</span>
+          <span class="signature-plain" data-lang-content="en">With sincere gratitude,</span>
           <br>
           <span class="signature-name" data-lang-content="pt">Família Cardoso</span>
           <span class="signature-name" data-lang-content="es">Familia Cardoso</span>
+          <span class="signature-name" data-lang-content="en">The Cardoso Family</span>
         </p>
       </div>
     </section>
@@ -342,7 +378,7 @@
     <div class="footer-content">
       <img src="images/flower.webp" alt="" class="footer-flower" aria-hidden="true">
       <p class="name-script footer-name">Natalia Cardoso</p>
-      <p class="dates footer-dates">24/12/1958 &mdash; 21/08/2026</p>
+      <p class="dates footer-dates"><span data-lang-content="pt">24/12/1958 &mdash; 21/08/2026</span><span data-lang-content="es">24/12/1958 &mdash; 21/08/2026</span><span data-lang-content="en">12/24/1958 &mdash; 08/21/2026</span></p>
     </div>
   </footer>
 
@@ -369,6 +405,6 @@
   </button>
 </div>
 
-<script src="main.js?v=22"></script>
+<script src="main.js?v=23"></script>
 </body>
 </html>
