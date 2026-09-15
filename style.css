@@ -27,7 +27,7 @@
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 4rem;
-  --space-xl: 5rem;
+  --space-xl: 3.5rem;
 
   --max-width: 780px;
   --radius: 4px;
@@ -174,7 +174,7 @@ body { background-color: var(--blush-beige); }
 .gallery-section,
 .video-section,
 #mensagem.copy-section {
-  margin: 0 0.6rem var(--space-md);
+  margin: 0 0.6rem var(--space-sm);
   padding-left: var(--space-xs);
   padding-right: var(--space-xs);
   background: var(--ivory);
@@ -225,7 +225,7 @@ body { background-color: var(--blush-beige); }
 
 /* ---------- Quote transitions between page areas ---------- */
 .quote-band {
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-md) var(--space-md);
   text-align: center;
   background: var(--blush-beige);
 }
@@ -626,7 +626,7 @@ body { background-color: var(--blush-beige); }
 /* =========================================================
    HERO
    ========================================================= */
-.hero-section { padding-top: var(--space-md); text-align: center; }
+.hero-section { padding-top: var(--space-md); padding-bottom: var(--space-sm); text-align: center; }
 
 .hero-inner {
   max-width: 420px;
