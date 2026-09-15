@@ -257,14 +257,14 @@ body { background-color: var(--blush-beige); }
 }
 
 .quote-band-large {
-  padding-top: calc(var(--space-lg) * 1.4);
-  padding-bottom: calc(var(--space-lg) * 1.4);
+  padding-top: calc(var(--space-lg) * 1.1);
+  padding-bottom: calc(var(--space-lg) * 1.1);
 }
 .quote-band-large .quote-text {
   font-size: clamp(1.35rem, 3.2vw, 1.75rem);
 }
 .quote-band-large + .copy-section {
-  padding-top: calc(var(--space-xl) * 1.15);
+  padding-top: var(--space-xl);
 }
 
 /* Striped background accent — used sparingly */
@@ -846,7 +846,8 @@ body { background-color: var(--blush-beige); }
 /* =========================================================
    MEMORIAL
    ========================================================= */
-.memorial-section { background: var(--blush-beige); overflow: hidden; }
+.memorial-section { background: var(--blush-beige); overflow: hidden; padding-top: var(--space-md); }
+.video-section { padding-bottom: var(--space-sm); }
 
 .memorial-card {
   background: var(--ivory);
@@ -959,7 +960,7 @@ body { background-color: var(--blush-beige); }
 
 .info-card-solo {
   max-width: 700px;
-  margin: 0 auto var(--space-lg);
+  margin: 0 auto var(--space-sm);
 }
 
 .info-heading {
