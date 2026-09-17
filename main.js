@@ -108,11 +108,14 @@
        --------------------------------------------------------- */
     var GALLERY_COUNT = 52;          // gallery1.jpg ... gallery52.jpg
     var GALLERY_EXT = "jpeg";        // change if files use a different extension
+    var GALLERY_SKIP = [24];         // numbers with no matching file — add more here (e.g. [24, 31]) if others go missing
     var galleryTrack = document.getElementById("gallery-track");
     var galleryImages = []; // { src, alt }
   
     if (galleryTrack) {
       for (var i = 1; i <= GALLERY_COUNT; i++) {
+        if (GALLERY_SKIP.indexOf(i) !== -1) continue;
+  
         var src = "images/gallery" + i + "." + GALLERY_EXT;
         var altPt = "Momento " + i + " da vida de Natalia Cardoso";
         galleryImages.push({ src: src, altPt: altPt });
