@@ -151,6 +151,13 @@ html[data-lang="en"] [data-lang-content="es"] { display: none; }
   margin-bottom: var(--space-md);
 }
 
+.share-memory-section { text-align: center; }
+.share-memory-text {
+  max-width: 46ch;
+  margin: 0 auto var(--space-md);
+  color: var(--text-primary);
+}
+
 .section-inner {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -173,7 +180,8 @@ body { background-color: var(--blush-beige); }
 #historia.copy-section,
 .gallery-section,
 .video-section,
-#mensagem.copy-section {
+#mensagem.copy-section,
+.share-memory-section {
   margin: 0 0.6rem var(--space-sm);
   padding-left: var(--space-xs);
   padding-right: var(--space-xs);
@@ -187,7 +195,8 @@ body { background-color: var(--blush-beige); }
   #historia.copy-section,
   .gallery-section,
   .video-section,
-  #mensagem.copy-section {
+  #mensagem.copy-section,
+  .share-memory-section {
     max-width: 1040px;
     margin: 0 auto var(--space-lg);
     padding-left: var(--space-md);
@@ -626,7 +635,7 @@ body { background-color: var(--blush-beige); }
 /* =========================================================
    HERO
    ========================================================= */
-.hero-section { padding-top: var(--space-md); padding-bottom: var(--space-sm); text-align: center; }
+.hero-section { padding-top: var(--space-md); padding-bottom: var(--space-md); text-align: center; }
 
 .hero-inner {
   max-width: 420px;
@@ -847,7 +856,7 @@ body { background-color: var(--blush-beige); }
    MEMORIAL
    ========================================================= */
 .memorial-section { background: var(--blush-beige); overflow: hidden; padding-top: var(--space-md); }
-.video-section { padding-bottom: var(--space-sm); }
+.video-section { padding-top: var(--space-md); padding-bottom: var(--space-md); }
 
 .memorial-card {
   background: var(--ivory);
